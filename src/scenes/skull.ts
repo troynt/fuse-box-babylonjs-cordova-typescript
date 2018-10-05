@@ -4,12 +4,13 @@ export const createScene = async (engine, canvas) => {
     
     const skull = await import("./skull.babylon");
     const [, file] = skull.match(/assets\/(.*skull.babylon)$/)
-    
+
     var scene = new BABYLON.Scene(engine);
     var light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 1, 0), scene);
     // var camera = new BABYLON.ArcRotateCamera("Camera", 0, Math.PI / 2, 100, new BABYLON.Vector3(0, 0, 0), scene);
 
-    const dist = -180;
+    // woo233
+    const dist = -100;
     console.log('dist is ', dist)
     var camera = new BABYLON.VirtualJoysticksCamera("Camera", new BABYLON.Vector3(0, 0, dist), scene);
     camera.checkCollisions = true;
@@ -32,7 +33,6 @@ export const createScene = async (engine, canvas) => {
     assetsManager.onTaskError = function (task) {
         console.log("error while loading " + task.name);
     }
-
 
     // Can now change loading background color:
     engine.loadingUIBackgroundColor = "Purple";
