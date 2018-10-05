@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "sourceMap": true,
+        "importHelpers": true,
+        "pretty": true,
+        "declaration": false,
+        "noImplicitAny": false,
+        "removeComments": false,
+        "suppressImplicitAnyIndexErrors": true,
+        "experimentalDecorators": true,
+        "noLib": false,
+        "jsx": "react",
+        "allowJs": true,
+        "lib": [
+            "dom",
+            "es2016"
+        ],
+        "moduleResolution": "node"
+    },
+    "include": [
+        "src/**/*"
+    ]
+}
